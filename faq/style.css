@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+body{
+background-color: lightblue;
+}
+.container{
+    width: 1170px;
+    margin: auto;
+}
+h2{
+    margin-top: 100px;
+    margin-bottom: 15px;
+}
+.accordian{
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 2px #ccc;
+}
+.accordian h5{
+    position: relative;
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+.icon{
+    margin-right: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+.accordian p{
+    color: #ccc;
+    max-height: 0px;
+ 
+    overflow: hidden;
+    transition: .3s;
+  
+}
+.activeContent{
+ 
+  max-height:fit-content !important;
+ 
+}
+

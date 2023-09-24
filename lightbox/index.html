@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Box</title>
+    <link rel="stylesheet" href="style.css"/>
+  
+</head>
+<body>
+    <div class="galleryOverlay"> </div>
+    <div class="imgBox">
+        <span>&times;</span>
+        <img src=""/>
+    </div>
+    <div class="container" id="gallery">
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-06.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-08.jpg"/>
+        </div>
+        <div class="galleryItems">
+            <img src="https://uptownskylla.in/wp-content/uploads/2019/10/05-Contener-No-3rd-10.jpg"/>
+        </div>
+    </div>
+</body>
+<script>
+    let overlay=document.querySelector(".galleryOverlay");
+    let imageBox=document.querySelector(".imgBox");
+    let img=document.querySelector(".imgBox img")
+    let gallery=document.querySelector("#gallery");
+    let close=document.querySelector('.imgBox span')
+
+    gallery.addEventListener("click",(e)=>{
+     
+        let currentPath=e.target.src;
+        if(currentPath!==undefined){
+        overlay.classList.add("galleryOverlayShow")
+        imageBox.classList.add("imgBoxShow")
+        img.src=currentPath;
+        }
+
+})
+close.addEventListener('click',()=>{
+    overlay.classList.remove("galleryOverlayShow")
+        imageBox.classList.remove("imgBoxShow")
+})
+overlay.addEventListener('click',()=>{
+    overlay.classList.remove("galleryOverlayShow")
+        imageBox.classList.remove("imgBoxShow")
+})
+</script>
+</html>

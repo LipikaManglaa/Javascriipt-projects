@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+main{
+    width: 400px;
+    margin: 100px auto 0px auto;
+    background:burlywood;
+    height: auto;
+    padding: 20px;
+}
+label{
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+          }
+          textarea{
+            margin-top: 10px;
+            resize: none;
+            margin-bottom: 10px;
+            width: 100%;
+          }
+          input{
+            text-align: right;
+            margin-bottom: 10px;
+          }
+          button{
+            border: 0px;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+          }
+          .chr-length,.uppercase,.lowercase,.specail,.number{
+            display: flex;
+            justify-content: space-between;
+          }

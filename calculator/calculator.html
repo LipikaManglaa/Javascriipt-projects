@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        table{
+            margin: auto;
+        }
+        table>tbody>tr>td{
+            padding: 20px;
+            background-color:lightgray;
+        }
+table>tbody>tr>td>button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: black;
+    border: 0px;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+    
+}
+table>tbody>tr>td>input{
+    width: 200px;
+    height: 30px;
+    text-align: right;
+    padding-right: 10px;
+}
+table{
+    margin-top: 100px;
+}
+    </style>
+
+</head>
+<body style="background: black">
+    <table>
+        <tr>
+            <td><button>C</button></td>
+            <td colspan="3"><input type="text"></td>
+        </tr>
+        <tr>
+            <td><button>+</button></td>
+            <td><button>1</button></td>
+            <td><button>2</button></td>
+            <td><button>3</button></td>
+        </tr>
+        <tr>
+            <td><button>-</button></td>
+            <td><button>4</button></td>
+            <td><button>5</button></td>
+            <td><button>6</button></td>
+        </tr>
+
+        <tr>
+            <td><button>*</button></td>
+            <td><button>7</button></td>
+            <td><button>8</button></td>
+            <td><button>9</button></td>
+        </tr>
+        <tr>
+            <td><button>/</button></td>
+            <td><button>.</button></td>
+            <td><button>0</button></td>
+            <td><button>=</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    var allbtn=document.querySelectorAll('button');
+    var inputData=document.querySelector('input');
+    var opr=['+','-','*','/','.']
+    allbtn.forEach((v,i)=>{
+        v.addEventListener('click',()=>{
+           if(allbtn[i].innerHTML=="="){
+            inputData.value=eval(inputData.value)??""; 
+            
+           }else if(allbtn[i].innerHTML=="C"){
+            inputData.value="";
+           }
+           else{
+            var oldData=inputData.value; //1224356+
+            var lastData=oldData[oldData.length-1];
+            var btnValue=allbtn[i].innerHTML;
+
+               if(opr.includes(btnValue)){
+                if(opr.includes(lastData)){
+                    var sliceData=oldData.slice(0,-1)
+                   var finalData=sliceData+btnValue
+                 }
+                         else{
+                            finalData=oldData+btnValue;
+                            if(finalData.length==1){
+                            finalData='';
+                        }
+                        }
+                              }
+                        else{
+                            finalData=oldData+btnValue
+                        }
+                        
+            inputData.value=finalData
+            
+           }
+        })
+    })
+</script>
+</html>

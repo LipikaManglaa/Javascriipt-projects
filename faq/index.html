@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faq</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq">
+            <div class="accordian">
+                <h5>1Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <i
+                        class=" icon fa-solid fa-caret-up "></i></h5>
+                <p class="activeContent">1Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+            </div>
+            <div class="accordian">
+                <h5>2Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum has been the industry's standard dummy text ever since the 1500sLorem Ipsum has been the industry's standard dummy text ever since the 1500s<i
+                        class="icon fa-solid fa-caret-down"></i></h5>
+
+                <p>2Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+            <div class="accordian">
+                <h5>3Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <i
+                        class="icon fa-solid fa-caret-down"></i></h5>
+                <p>3Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let question = document.querySelectorAll(".accordian h5")
+
+    question.forEach((v, i) => {
+        v.addEventListener("click", () => {
+            question.forEach((value, index) => {
+                if (i != index) {
+                    value.nextElementSibling.classList.remove('activeContent')
+                    value.children[0].classList.remove("fa-caret-up")
+                    value.children[0].classList.add("fa-caret-down")
+                }
+            })
+            v.children[0].classList.toggle("fa-caret-down")
+            v.children[0].classList.toggle("fa-caret-up")
+
+            v.nextElementSibling.classList.toggle('activeContent')
+        })
+    })
+</script>
+
+</html>

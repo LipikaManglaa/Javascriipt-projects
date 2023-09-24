@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=main, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <main>
+        <div class="header">
+            <h1>Password Genertor</h1>
+            <textarea name="" id="result" cols="30" rows="3"></textarea>
+            
+        </div>
+        <div>
+            <div class="chr-length">
+              <label for="">Password Length</label>
+              <input type="number" min="6" max="20" id="length">
+            </div>
+            <div class="uppercase">
+                <label for="">Include Uppercase</label>
+                <input type="checkbox" id="uppercase" checked>
+              </div>
+              <div class="lowercase">
+                <label for="">Include lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
+              </div>
+              <div class="specail">
+                <label for="">Include Special characters</label>
+                <input type="checkbox" id="special" checked>
+              </div>
+              <div class="number">
+                <label for="">Include Number</label>
+                <input type="checkbox" id="number" checked>
+              </div>
+              <div class="btn">
+                <button class="btn-generator">Password generator</button>
+                <button id="copy-Passowrd">Copy password</button>
+              </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
